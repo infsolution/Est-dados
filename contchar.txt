@@ -15,7 +15,6 @@ int main(int argc, char** argv)
 	char palavra[100];
 	char letra;
 	fgets(palavra,255,stdin);
-	fflush(stdin);//LIMPA A MEMÓRIA NA ENTRADA DOS DADOS DO 'FGETS'
 	scanf("%c",&letra);
 	printf("%d",contChar(palavra,letra,0,0));
 	return 0;
