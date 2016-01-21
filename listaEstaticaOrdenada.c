@@ -93,7 +93,9 @@ int tamanhoLista(){
 }
 
 	
-
+void buscaBinaria(){
+	
+}
 
 int main(int argc, char** argv)
 {
