@@ -59,22 +59,32 @@ class Pilha{
 			}
 		}
 	}
+	void verifExpr(char expres[20]){
+	char le;	
+	int i=0,j;
+	while(expres[i]!='\0'){
+		le=achaFlag(expres[i]);
+		i++;
+		printf("%c\n",le);
+	}
+	}
+	char achaFlag(char l){
+		char abri[3];
+		char fecha[3];
+		strcpy(abri,"{[(");
+		strcpy(fecha,"}])");
+		int i;
+		for(i=0;i<3;i++){
+			if(abri[i]==l){
+				return abri[i];
+				break;
+			}
+		}
+	}
 };
 int main(){
 	Pilha *p = new Pilha();
-	p->mostrar();
-	int v = p->isVazia(p);
-		p->destroi(p);
-	printf("%d\n",v);
-	p->push('y');
-	p->push('x');
-	p->push('z');
-	p->push('w');
-	p->mostrar();
-	p->pop();
-	printf(">>>pop<<<\n");
-	p->mostrar();
-	p->destroi(p);
-	p->mostrar();
+	p->verifExpr("if(a==b){b=a};");
+	//p->mostrar();
 	return 0;
 }
